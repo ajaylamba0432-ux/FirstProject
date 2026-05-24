@@ -32,5 +32,6 @@ public class TicketBooking {
             }
         }
         sc.close();
+        System.out.println("Thank you for using our service");
     }
 }
