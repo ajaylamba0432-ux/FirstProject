@@ -1,0 +1,56 @@
+<html>
+    <head>
+<style type="text/css">
+    #btn1
+    {
+        font-size: 30px;
+        color:white;
+        background-color: red;
+        border-radius: 20px;
+    }
+    #btn1:hover
+    {
+        color:yellow;
+        background-color: aqua;
+    }
+</style>
+    </head>
+    <body>
+        <img src="a.png" width="200" height="200" id="img1" onmouseover="img1.style.width='600px';" onmouseout="img1.style.width='200';">
+        <input type="button" id="btn1" value="Information">
+    </body>
+</html>
+<html>
+  <head>
+    <script>
+      let s=0,m=0,h=0
+      function fun1()
+      {
+        if(s==59)
+        {
+          s=0
+          m++
+        }
+        s++
+        if(m==59)
+        {
+          m=0
+          h++
+        }
+        document.getElementById('hour').value=h
+        document.getElementById('min').value=m
+        document.getElementById('sec').value=s
+      }
+      function fun2()
+      {
+        setInterval("fun1()",1000)
+      }
+    </script>
+  </head>
+  <body onload="fun2()">
+    <h2>Time</h2>
+    <input type="text" id="hour" size="2">
+    <input type="text" id="min" size="2">
+    <input type="text" id="sec" size="2">
+  </body>
+</html>
